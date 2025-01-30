@@ -18,3 +18,8 @@
 // Three values were passed to the function so it should return 3.
 
 
+var argumentsLength = function (...args) {
+    return args.length;
+  };
+  
+  console.log(argumentsLength(1, 2, 3, 5)); // 3
