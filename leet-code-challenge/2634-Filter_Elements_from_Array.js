@@ -29,3 +29,15 @@
 // Output: [-2,0,1,2]
 // Explanation:
 // Falsey values such as 0 should be filtered out
+
+
+var filter = function (arr, fn) {
+    const filteredArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (fn(arr[i], i)) {
+            filteredArr.push(arr[i])
+        }
+
+    }
+    return filteredArr;
+};
