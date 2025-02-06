@@ -13,3 +13,18 @@
 // Input: jewels = "z", stones = "ZZ"
 // Output: 0
 
+var numJewelsInStones = function (jewels, stones) {
+    let jew = jewels.split("");
+    let ston = stones.split("");
+    let count = 0;
+    for (let i = 0; i < jew.length; i++) {
+        for (let j = 0; j < ston.length; j++) {
+            if (jew[i] === ston[j]) {
+                count++
+            }
+        }
+    }
+    return count;
+};
+
+console.log(numJewelsInStones("aA", "aAAbbbb"))//3
