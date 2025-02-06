@@ -11,3 +11,15 @@
 // Input: n = 6
 // Output: 6
 // Explanation: The smallest multiple of both 6 and 2 is 6. Note that a number is a multiple of itself.
+
+
+var smallestEvenMultiple = function (n) {
+    if (n % 2 == 0){
+        return n;
+    } else {
+        return n*2;
+    }
+};
+
+console.log(smallestEvenMultiple(5)); //10
+console.log(smallestEvenMultiple(8)); //8
