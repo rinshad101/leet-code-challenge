@@ -22,3 +22,11 @@
 // Output: true
 // Explanation:
 // There are no 'a's, hence, every 'a' appears before every 'b' and we return true.
+
+
+var checkString = function(s) {
+    return !s.includes("ba");
+    
+};
+
+console.log(checkString("aaaabbb")) //true
