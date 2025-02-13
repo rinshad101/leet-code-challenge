@@ -25,3 +25,11 @@
 
 // Input: s = "chopper is not a tanuki", k = 5
 // Output: "chopper is not a tanuki"
+
+var truncateSentence = function(s, k) {
+    let arr = s.split(" ");
+    let i = arr.slice(0,k)
+    return i.join(" ")
+};
+
+console.log(truncateSentence("Hello how are you Contestant",4))// Hello how are you
