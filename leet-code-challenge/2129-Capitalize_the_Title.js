@@ -26,3 +26,18 @@
 // Explanation:
 // The word "i" has length 1, so it is lowercase.
 // The remaining words have a length of at least 3, so the first letter of each remaining word is uppercase, and the remaining letters are lowercase.
+
+var capitalizeTitle = function (title) {
+    let arr = title.split(" ");
+    let maped = arr.map((item) => {
+        if (item.length <= 2) {
+        return item.toLowerCase();
+    } else {
+        return item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
+    }
+})
+return maped.join(" ");
+};
+
+
+console.log(capitalizeTitle("First leTTeR of EACH Word")) // First Letter of Each Word
