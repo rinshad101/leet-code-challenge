@@ -27,3 +27,12 @@
 // Input: nums = [1,1,1,3,3,4,3,2,4,2]
 
 // Output: true
+
+
+var containsDuplicate = function(nums) {
+    const num = new Set(nums);
+    let arr = [...num]
+    return arr.length !== nums.length
+};
+
+console.log(containsDuplicate([1,1,1,3,3,4,3,2,4,2])) //true
