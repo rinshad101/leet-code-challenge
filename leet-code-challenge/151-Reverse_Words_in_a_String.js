@@ -22,3 +22,11 @@
 // Input: s = "a good   example"
 // Output: "example good a"
 // Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
+
+var reverseWords = function(s) {
+    let arr = s.split(" ");
+    let filt = arr.filter((item) => item !== "")
+    return filt.reverse().join(" ")
+};
+
+console.log(reverseWords("the sky is blue")) // blue is sky the
