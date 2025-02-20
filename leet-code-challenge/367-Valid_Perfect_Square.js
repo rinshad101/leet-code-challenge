@@ -18,3 +18,23 @@
 // Explanation: We return false because 3.742 * 3.742 = 14 and 3.742 is not an integer.
 
 
+var isPerfectSquare = function(num) {
+    if (num < 1) return false;
+    
+    let left = 1, right = num;
+
+    while (left <= right) {
+        let mid = Math.floor((left + right) / 2);
+        let square = mid * mid;
+
+        if (square === num) {
+            return true;
+        } else if (square < num) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+}   
+
+console.log(isPerfectSquare(16)) // true
