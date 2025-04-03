@@ -19,8 +19,6 @@
 // }
 // If all assertions pass, then your solution will be accepted.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,1,2]
@@ -34,3 +32,31 @@
 // Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
 // It does not matter what you leave beyond the returned k (hence they are underscores).
 
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        if (nums.length == 0)
+            return 0;
+
+        int k = 1;
+
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[i - 1]) {
+                nums[k] = nums[i];
+                k++;
+            }
+        }
+
+        return k;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        int[] nums1 = { 1, 1, 2 };
+        int k1 = solution.removeDuplicates(nums1);
+        System.out.println(k1);
+
+        int[] nums2 = { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
+        int k2 = solution.removeDuplicates(nums2);
+        System.out.println(k2);
+    }
+}
