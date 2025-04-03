@@ -14,3 +14,13 @@
 // Output: -1
 // Explanation: "leeto" did not occur in "leetcode", so we return -1.
 
+class Solution {
+    public int strStr(String haystack, String needle) {
+        return haystack.indexOf(needle);
+    }
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.strStr("sadbutsad", "sad")); 
+        System.out.println(solution.strStr("leetcode", "leeto")); 
+    }
+}
