@@ -34,3 +34,7 @@ class Solution {
         System.out.println(lengthOfLastWord("luffy is still joyboy"));
     }
 }
+
+dgfvhldhh
+khs
+sjsj'sj
