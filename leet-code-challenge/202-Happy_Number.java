@@ -23,3 +23,38 @@
 // Input: n = 2
 // Output: false
 
+import java.util.HashSet;
+import java.util.Set;
+
+class Solution {
+    public static boolean isHappy(int n) {
+        Set<Integer> seen = new HashSet<>();
+
+        while (n != 1 && !seen.contains(n)) {
+            seen.add(n);
+            n = getSumOfSquares(n);
+        }
+
+        return n == 1;
+    }
+
+    private static int getSumOfSquares(int num) {
+        int sum = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+            sum += digit * digit;
+            num /= 10;
+        }
+
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int n1 = 19;
+        int n2 = 2;
+
+        System.out.println(n1 + " is happy? " + isHappy(n1));
+        System.out.println(n2 + " is happy? " + isHappy(n2)); 
+    }
+}
