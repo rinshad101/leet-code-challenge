@@ -31,3 +31,29 @@
 // - "04" from "430043": 4 is not a divisor of 430043.
 // - "43" from "430043": 43 is a divisor of 430043.
 // Therefore, the k-beauty is 2.
+
+class Solution {
+    public static int divisorSubstrings(int num, int k) {
+        String numStr = String.valueOf(num);
+        int count = 0;
+
+        for (int i = 0; i <= numStr.length() - k; i++) {
+            String subStr = numStr.substring(i, i + k);
+            int subNum = Integer.parseInt(subStr);
+
+            if (subNum != 0 && num % subNum == 0) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    public static void main(String[] args) {
+        int num1 = 240, k1 = 2;
+        int num2 = 430043, k2 = 2;
+
+        System.out.println("K-beauty of" + num1 + "with k=" + k1 + ":" + divisorSubstrings(num1, k1));
+        System.out.println("K-beauty of" + num2 + "with k=" + k2 + ":" + divisorSubstrings(num2, k2));
+    }
+}
