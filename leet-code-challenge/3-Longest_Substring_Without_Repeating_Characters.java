@@ -19,6 +19,8 @@
 // Explanation: The answer is "wke", with the length of 3.
 // Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
+import java.util.HashMap;
+
 class Solution {
     public int lengthOfLongestSubstring(String s) {
         if (s == null || s.length() == 0) return 0;
